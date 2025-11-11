@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAD & 3D Printing Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bayon&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Roboto", sans-serif;
+            background:black;
+            color:white;
+            text-align: center;
+            /* overflow-x: hidden; */
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 30px;
+            background: rgba(5, 5, 5, 0.3);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            height: 68px;
+        }
+        .logo {
+            position: absolute;
+            left: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 60px;
+            width: auto;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            padding: 0;
+        }
+        .nav-links li {
+            position: relative;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: 2px solid rgba(205, 205, 205, 1);
+            border-radius: 100px;
+            transition: all 0.3s ease-in-out;
+        }
+        .nav-links a:hover {
+            /* black-red themed hover: red background with subtle red glow and readable text */
+            background: rgba(223, 48, 48, 1);
+            color: black;
+            border-color: rgba(223, 48, 48, 1);
+            box-shadow: 0 8px 20px rgba(223, 48, 48, 0.22);
+            transform: translateY(-2px);
+        }
+        .content {
+            margin-top: 65px;
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+        }
+        .printer {
+            margin-left: 120px;
+            margin-top: -30px;
+            filter: blur(70px);
+        }
+        .printer2 {
+            position: absolute;
+            margin-left: 180px;
+            margin-top: 15px;
+            filter: brightness(150%);
+        
+        }
+        .text-overlay{
+            margin:0px;
+            font-family: "Bayon", sans-serif;
+            margin-left: -120px;
+        }       
+        #design-text{
+            color: rgb(255, 0, 0);
+            font-size: 40px;
+            font-weight: 400;
+            margin-top: 100px;
+            margin-left: -10px;
+            line-height: 63px;
+            letter-spacing: 2px;
+        }
+        #cad-text {
+            font-size: 250px;
+            font-weight: 400;
+            margin-top: -140px;
+            letter-spacing: 15px;
+            color: rgba(255, 255, 255, 1);
+            margin-bottom: 0px;
+        }
+        #and {
+            color: red;
+            font-size: 64px;
+            margin-top: -160px;
+            margin-left: -18px;
+            font-weight: 400;
+        }
+        #print-text{
+            font-size: 96px;
+            font-weight: 400;
+            margin-top: -110px;
+            margin-left: -10px;
+            letter-spacing: 3px;
+        }
+        #club-text{
+            font-size:48px ;
+            font-weight: 400;
+            color:rgba(255, 0, 0, 1);
+            margin-top: -120px;
+            margin-left: -2px;
+            letter-spacing: 3px;
+        }
+        .about-us{
+            color:rgba(197, 197, 197, 1);
+            margin-top:-70px;
+            font-weight: 400;
+        }
+        .abtus-heading{
+            font-family: "Bayon", sans-serif;
+            font-size: 64px;
+            font-weight: 100;
+            letter-spacing: 2px;
+            color: rgba(34, 17, 18, 1);
+            -webkit-text-stroke: 2px white;            
+        }
+        #abtus-content{
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 30px;
+            letter-spacing: 0.5px;
+            text-align: center;
+        }
+        .line1{
+            width: 909px;
+            height: 3px; 
+            background-color: rgba(223, 48, 48, 1); 
+            border: none;
+            margin: 0 auto;
+            margin-top: 50px; 
+        }
+        .line3{
+            width: 909px;
+            height: 3px; 
+            background-color: rgba(223, 48, 48, 1); 
+            border: none;
+            margin: 0 auto;
+        }
+        #line2{
+            width: 1072px;
+            height: 4px; 
+            background-color:rgba(255, 255, 255, 1); 
+            border: none;
+            margin: 0 auto;
+        }
+        #what-we-do{
+            height:300px;
+        }
+        #poly1{
+            position: absolute;
+            margin-left:-363px;
+            margin-top: 200px;
+            z-index: -2;
+    
+        }
+         #poly2{
+            position: absolute;
+            margin-left:-93px;
+            margin-top: -90px;
+            z-index: -2;
+        }
+        #poly3{
+            position: absolute;
+            margin-left:-93px;
+            margin-top: 700px;
+            z-index: -2;
+        }        
+        #project-text{
+            font-family: "Bayon", sans-serif;
+            font-size: 64px;
+            font-weight: 400;
+            letter-spacing: 3px;
+            margin-top: -10px;
+        }
+        #underline-1{
+            width: 150px;
+            height: 0.5px;
+            background-color: white;
+            margin-top: -60px;
+        }
+        #ongoing-text{
+            font-family: "Bayon", sans-serif;
+            font-size: 48px;
+            font-weight: 400;
+            font-family: "Bayon", sans-serif;
+            letter-spacing: 2px;
+            margin-top: -5px;
+        }
+        #p1-image{
+            margin-top: -20px;
+        }
+        .pname{
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 30px;
+        }
+        #pcontent{
+            text-align: center;
+            line-height: 30px;
+            font-weight: 400px;
+            letter-spacing: 0.3px;
+            color:rgba(255, 255, 255, 1);
+            ;
+        }
+        #cadlogo-svg{
+            position: absolute;
+            width: 676px;
+            height: 716px;
+            filter:blur(5px);
+            opacity: 22%;
+            margin-top: -320px;
+            margin-left: -940px;
+        }
+        .heading{
+            font-size:64px ;
+            font-family: "Bayon", sans-serif;
+            font-weight: 400;
+            margin-top: 146px;
+            letter-spacing: 3px;
+        }
+        #underline-2{
+            width: 150px;
+            height: 0.5px;
+            background-color: white;
+            margin-top: -60px;
+        }
+        #achievements-content{
+            font-weight: 600;
+            font-size: 25px;
+            line-height: 40px;
+            letter-spacing: 0.5px;
+        }
+        #members-txt{
+            font-size: 36px;
+            font-weight:600;
+            line-height: 40px;
+            letter-spacing: 1px;
+            margin-top: 150px;
+        }
+        .hex-svg{
+            position:absolute;
+            z-index: -2;
+        }
+        #hex-1{
+            margin-top: 200px ;
+            margin-left: -290px; ;
+        }
+        #hex-2{
+            margin-top: -100px ;
+            margin-left: 10px; ;
+        }
+        #hex-3{
+            margin-top: 200px ;
+            margin-left: 503px; ;
+        }
+        #cerificate-img{
+            position:absolute;
+            margin-left: -540px;
+            margin-top: -30px;
+            
+        }
+        .number{
+            font-weight: 900;
+            font-size: 64px;
+            line-height: 40px;
+            letter-spacing: 5px;
+        }
+        .cswap{
+            font-size: 64px;
+            font-weight: 700;
+            line-height: 40px;
+            margin-left: 50px;
+            color: rgba(205, 205, 205, 1);
+            
+        }  
+        .details{
+            display: flex;
+            margin-left: 610px;
+            margin-top: -15px;
+        }
+        #cswp{
+            margin-top: -60px;
+            margin-left: 630px;
+        }
+        .certi-content{
+            font-size:24px ;
+            font-weight:400 ;
+            line-height:40px ;
+            letter-spacing: 0.5px;
+            word-spacing: 5px;
+        }
+        #cswa-content{
+            margin-top: 112px;
+        }
+        #cswp-content{
+            margin-top: 50px;
+        }
+        #certi-side-hdng{
+            font-weight: 700;
+        }
+        #wwr-cad-svg{
+            position: absolute;
+        }
+        .wwr{
+            margin-top: 310px;
+        }
+       #wwr-text-img{
+        position:absolute;
+        display: flex;
+        margin-top: -310px;
+        margin-left: 200px;
+        z-index: 2;
+       }
+       #wwr-shadow{
+        position:absolute;
+        display: flex;
+        margin-top: -300px;
+        margin-left: 110px;
+        z-index: 1;
+       }
+       .designation{
+        font-family: "Bayon", sans-serif;
+        font-size: 48px;
+        font-weight: 400;
+        letter-spacing: 3px;
+       }
+       .underline{
+        height: 3px;
+        background-color: white;
+        margin-top: -40px;
+       }
+       #ul-1{
+        width:234px ;
+       }
+       #ul-2{
+        width: 173px; ;
+       }
+       #ul-3{
+        width: 209px;
+       }
+       #ul-4{
+        width: 207px;
+       }
+    .pp{
+     margin-top: 40px;
+     border-radius: 50%;
+     display: inline-block;
+     width: 220px;
+     height: 220px;
+     box-sizing: border-box;
+     object-fit: cover;
+    }
+
+    #pf-4 .pp{
+        border-radius: 0 !important;
+        max-width: 260px;
+        max-height: 260px;
+        object-fit: none;
+        display: inline-block;
+    }
+       .profile{
+        margin-top: 40px;
+       }
+       .name{
+        font-size: 48px;
+        font-weight: 600;
+        letter-spacing: 3px;
+       }
+       #pf-2{
+        margin-top: 70px;
+       }
+       #pf-3{
+        margin-top: 70px;
+       }
+       #pf-4{
+        margin-top: 70px;
+       }
+       .hdwd{
+        margin-top: 150px;
+        align-content: center;
+       }
+       #hdwd-heading{
+        margin-top: 30px;
+        align-content: center;
+       }
+       #underline-sftwr{
+        width: 584px;
+        margin-top: -80px;
+       }
+       .software-hero {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           margin: 30px 0 50px 0;
+           z-index: 2;
+       }
+
+       .software-hero img {
+           width: 260px;
+           height: auto;
+           max-width: 80%;
+           border-radius: 12px;
+           box-shadow: 0 16px 36px rgba(0,0,0,0.55);
+       }
+       .software-guide {
+           opacity: 0.22;
+           pointer-events: none;
+           display: block;
+           margin: 10px auto;
+           width: 520px;
+           max-width: 92%;
+           height: auto;
+           filter: drop-shadow(0 8px 20px rgba(0,0,0,0.45));
+       }
+       .advantages{
+        height: 500px;
+        }
+        #center-text{
+            font-size: 64px;    
+            font-family: "Bayon", sans-serif;
+            font-weight: 400;
+            line-height: 80px;
+            margin-top: 600px;
+            letter-spacing: 3px;
+        }
+        .adv-points{
+            position: absolute;
+        }
+        .advt-text{
+            color: rgba(205, 205, 205, 1);
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 30px;
+            letter-spacing: 2px;
+        }
+        #adv-1{
+            margin-top: -600px;
+            margin-left: 400px;
+        }
+        #adv-2{
+            margin-top: -600px;
+            margin-left: 880px;
+        }
+        #adv-3{
+            margin-top: -290px;
+            margin-left: 170px
+        }
+        #adv-4{
+            margin-top: -280px;
+            margin-left: 1100px;
+        }
+        #adv-5{
+            margin-top: 10px;
+            margin-left: 400px;
+        }
+        #adv-6{
+            margin-top: 10px;
+            margin-left: 900px;
+        }
+        /* Hover-scale effect for advantage icons and software images */
+        .adv-svg,
+        .hover-scale {
+            display: inline-block; /* allow transform */
+            transform-origin: center center;
+            transition: transform 200ms ease, filter 200ms ease;
+            cursor: pointer;
+        }
+        .adv-svg:hover,
+        .hover-scale:hover {
+            transform: scale(1.08);
+            filter: brightness(1.05);
+        }
+        /* Reusable red glow for members, achievements and projects images */
+        .glow-red{
+            display: inline-block;
+            transform-origin: center center;
+            transition: transform 220ms cubic-bezier(.2,.8,.2,1), filter 220ms ease;
+            will-change: transform, filter;
+        }
+        .glow-red:hover{
+            transform: scale(1.04);
+            /* layered drop-shadows produce a red glow; kept subtle */
+            filter: drop-shadow(0 0 12px rgba(255,0,0,0.85)) drop-shadow(0 0 28px rgba(255,0,0,0.25));
+        }
+        img#p2-image.glow-red{
+            display: inline-block;
+            transition: transform 220ms cubic-bezier(.2,.8,.2,1), box-shadow 220ms ease;
+            transform-origin: center center;
+            /* ensure no filter remains by default */
+            filter: none;
+        }
+        img#p2-image.glow-red:hover{
+            transform: scale(1.04);
+            /* use box-shadow to create a glow that doesn't tint the image */
+            box-shadow: 0 0 18px rgba(255,0,0,0.85), 0 0 36px rgba(255,0,0,0.25);
+        }
+        #gallery{ scroll-margin-top: 90px; }
+        #gallery-section{
+            padding: 40px 20px;
+            background: rgba(0,0,0,0.02);
+            margin-top: 40px;
+            color: white;
+        }
+        #gallery-section .heading{
+            font-size: 48px;
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+        .gallery-grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            align-items: stretch;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+        .gallery-item{
+            overflow: hidden;
+            border-radius: 8px;
+            background: rgba(20,20,20,0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative; /* needed for caption overlay */
+        }
+        .gallery-item img{
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            display: block;
+            transition: transform 220ms ease, box-shadow 220ms ease;
+        }
+        .gallery-item img:hover{
+            transform: scale(1.06);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+        }
+        .gallery-item::after{
+            content: attr(data-title);
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 10px 8px;
+            background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 60%);
+            color: #fff;
+            font-size: 14px;
+            text-align: center;
+            transform: translateY(100%);
+            transition: transform 180ms ease, opacity 180ms ease;
+            opacity: 0;
+            pointer-events: none;
+        }
+        .gallery-item:hover::after{
+            transform: translateY(0%);
+            opacity: 1;
+        }
+        .bg-maroon-dark {
+        background-color: #581616;
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="cad.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#members">Members</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <div class="printer"><img src="1000029579-removebg-preview[1] 1.png"  width="885px" height="885px"></div>
+        <div class="printer2"><img src="1000029579-removebg-preview[1] 1.png"  width="685px" height="685px"></div>
+        <div class="text-overlay">
+            <h1 id="design-text">DESIGN. INNOVATE. 3D PRINT</h1>
+            <h1 id="cad-text">CAD</h1>
+            <h1 id="and">&</h1>
+            <h1 id="print-text">3D PRINTING</h1>
+            <h1 id="club-text">CLUB IIITDMJ</h1>
+        </div>
+    </div>
+
+    <div id="about-us" class="about-us">
+        <div class="abtus-heading">ABOUT US</div>
+        <P id="abtus-content">The CAD Club provides students with the opportunity to visualize design ideas using software like CATIA and<br>
+            SOLIDWORKS. Members gain a deeper understanding of design through renderings and simulations to assess real-world<br>
+             performance.<br>
+            CAD is a key part of Digital Product Development (DPD) within Product Lifecycle Management (PLM) and integrates with <br>
+            tools like Computer-Aided Engineering (CAE), Finite Element Analysis (FEA), and Computer-Aided Manufacturing (CAM). It<br>
+             aids in photorealistic rendering, motion simulation, and product data management (PDM).<br>
+            Engineers use CAD for precise modeling, utilizing history, features, parameterization, and constraints to analyze properties<br>
+             like tensile strength, stress, and environmental impact.
+        </P>
+    </div>
+
+    <hr class="line1"><br>
+    <hr id="line2"><br>
+    <hr class="line3">
+    <img src="what we do.png" id="what-we-do">
+    <img src="Polygon 1 (1).svg" id="poly1">
+    <img src="Polygon 2.svg" id="poly2">
+    <img src="Polygon 3.svg" id="poly3">
+
+
+    <div id="projects" class="projects">
+        <div><h1 id=project-text>PROJECTS</h1>
+            <hr id="underline-1">
+        <h1 id=ongoing-text>ONGOING PROJECTS</h1>
+        </div>
+
+        <div class="project1">
+            <img src="bioarm.png" id="p1-image" class="glow-red">
+            <h1 class="pname">Bionic Arm</h1>
+            <p id="pcontent">
+                Our CAD project focused on developing a functional, lightweight bionic arm prototype.<br>
+                This model integrates precise mechanics with an ergonomic, custom-fit design for improved user control.<br>
+                The core challenge was modeling the multi-degree-of-freedom gripper mechanism<br> and ensuring seamless structural integrity for 3D printing.
+                The final design prioritizes modularity and uses advanced CAD analysis to optimize <br>
+                weight distribution, demonstrating a comprehensive approach to medical device engineering.
+            </p>
+        </div>
+        <br>
+        <div class="project2">
+            <img src="driveline.png" id="p2-image" class="glow-red">
+            <h1 class="pname">Driveline</h1>
+            <p id="pcontent">
+                Our CAD work focused on modeling a robust and efficient driveline system,<br> the critical component 
+                that transfers power from the engine to the wheels in a vehicle.<br>
+                Key models included the transmission shaft, the propeller shaft<br> with its universal joints, and the differential gear assembly.<br>
+                The project prioritized designing components for optimal torque handling and minimal power loss,<br>
+                 showcasing precise tolerancing and stress analysis within the CAD environment.
+            </p>
+        </div>   
+    </div>
+    <img src="cad.png" id="cadlogo-svg">
+
+    <div id="achievements" class="achievments">
+        <h1 class="heading">ACHIVEMENTS</h1>
+        <hr id="underline-2"> 
+        <p id="achievements-content">
+            Autodesk Design Challenge organised by IIT Kanpur where our VTOL model <br>
+            secured 1st rank.<br>
+            The team designed a VTOL drone in Autodesk Fusion 360.
+        </p>
+        <img src="achievements img.png" id="achievments-image" class="glow-red">
+
+        <p id="achievements-content">
+            One of the flagship events at COGNIZANCE’25,<br>
+            the prestigious annual techfest of IIT Roorkee, where we secured 1st position.<br>
+            The team designed a 3D model of a Smart City.
+        </p>
+        <img src="cognizance.jpg" id="achievments-image" class="glow-red" width="452px">
+
+        <p id="achievements-content">
+            AutoDesk Design Challenge at IIT Kanpur Techfest 2025 (Techkriti)<br>
+            where we secured 1st runner up.<br>
+            The team designed a Wheelchair.
+        </p>
+        <img src="techkriti1.png" id="achievments-image" class="glow-red" width="452px">
+
+        <p id="achievements-content">
+            AutoDesk Design Challenge at IIT Kanpur Techfest 2025 (Techkriti)<br>
+            where we secured 2nd runner up.<br>
+            The team designed a Wheelchair.
+        </p>
+        <img src="techkriti2.jpg" id="achievments-image" class="glow-red" width="452px"><br><br>
+        <h2 style="color: rgba(255,0,0,0.85);">AND MORE...</h2>
+
+    </div>
+
+    <div id="members-achievements">
+    <h1 id="members-txt">Our  members have  achieved</h1>
+        <img src="certificate-img.png" id="cerificate-img">
+
+        <div class="details">
+            <p class=number id="num-26">26</p>
+            <p class="cswap" id="cswa-text"> CSWA Certifications</p>
+        </div>
+
+        <div class="details" id="cswp">
+            <p class="number" id="num-1">1 </p>
+            <p class="cswap" id="cswp-text"> CSWP Certifications</p>
+        </div>
+    </div>
+        <p class="certi-content" id="cswa-content"><span id="certi-side-hdng">CSWA :</span> 
+            It is an entry-level certification for students and professionals seeking <br>
+            to demonstrate proficiency in CAD design. The CSWA certification proves <br>
+            foundational CAD skills, enhancing job prospects in engineering, product <br>
+            design, and manufacturing. It helps employers identify candidates with verified<br> 
+            SOLIDWORKS proficiency, giving certified individuals a competitive edge.
+        </p>
+        <p class="certi-content" id="cswp-content"><span id="certi-side-hdng">CSWP :</span>  
+            The CSWP (Certified SOLIDWORKS Professional) Certifications<br>
+            demonstrates advanced proficiency in SOLIDWORKS, including complex part<br>
+            modeling, assemblies, and design validation. It is highly valued in the industry,<br> 
+            boosting job prospects and credibility for mechanical and industrial designers.
+        </p>
+    </div>
+    <div class="wwr">
+        <img src="who we are.png" id="wwr-banner">
+        <img src="who we are img.png" id="wwr-text-img">
+        <img src="black shadow.png" id="wwr-shadow">
+        <div id="members" class="members">
+            <h1 class="designation">FACULTY INCHARGE</h1>
+            <hr class="underline" id="ul-1">
+            <img src="MKT sir.jpg" class="pp glow-red">
+            <h1 class="name">Dr. Manish K. Thakur</h1>
+        </div>
+        <div class="profile" id="pf-2">
+            <h1 class="designation">COORDINATOR</h1>
+            <hr class="underline" id="ul-2">
+            <img src="Raj sir.jpg" class="pp glow-red">
+            <h1 class="name">Raj Jain</h1>
+        </div>
+        <div class="profile" id="pf-3">
+            <h1 class="designation">CO-CORDINATOR</h1>
+            <hr class="underline" id="ul-3">
+            <img src="Krutika mam.jpg" class="pp glow-red">
+            <h1 class="name">Krutika Raut</h1>
+        </div>
+        <div class="profile" id="pf-4">
+            <h1 class="designation">OTHER MEMBERS</h1>
+            <hr class="underline" id="ul-4">
+              <img src="other members.png" class="glow-red" style="width: auto; height: auto;">
+        </div>
+    </div>
+    <div class="hdwd">
+        <img src="how we do.png">
+        <p class="heading" id="hdwd-heading">
+            SOFTWARES WE TEACH AND THEIR ADVANTAGES :
+        </p>
+        <hr class="underline" id="underline-sftwr">
+        <img src="images\Group 44.png" id="tree-lines">
+        <img src="software-tree.png" id="software-tree">
+    </div>
+    <div class="advantages">
+        <p id="center-text">
+            ADVANTAGES <BR>
+            OF <br> 
+            CAD
+        </p>
+        <div class="adv-points" id="adv-1">
+            <img src="svg\saves time.svg" class="adv-svg" alt="Saves Time" title="Saves Time">
+            <p class="advt-text">Saves Time</p>
+        </div>
+        <div class="adv-points" id="adv-2">
+            <img src="svg\easy to edit.svg" class="adv-svg" alt="Easy to Edit" title="Easy to Edit">
+            <p class="advt-text">Easy to Edit</p>
+        </div>
+        <div class="adv-points" id="adv-3">
+            <img src="svg\easy to use.svg" class="adv-svg" alt="Easy to Use" title="Easy to Use">
+            <p class="advt-text">Easy to Use</p>
+        </div>
+        <div class="adv-points" id="adv-4">
+            <img src="svg\code reuse.svg" class="adv-svg" alt="Code Re-Use" title="Code Re-Use">
+            <p class="advt-text">Code Re-Use</p>
+        </div>
+        <div class="adv-points" id="adv-5">
+            <img src="svg\decrease in efforts.svg" class="adv-svg" alt="Decrease in effort" title="Decrease in effort">
+            <p class="advt-text">Decrease in<br><br> effort</p>
+        </div>
+        <div class="adv-points" id="adv-6">
+            <img src="svg\improved accuracy.svg" class="adv-svg" alt="Improved Accuracy" title="Improved Accuracy">
+            <p class="advt-text">Improved<br><br> Accuracy</p>
+        </div>
+    </div>
+
+    <section id="gallery" class="gallery-section">
+                <h1 class="heading">GALLERY</h1>
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-title="analysis"><img src="analysis.jpg" alt="analysis"></div>
+                   <div class="gallery-item" data-title="basketball duo"><img src="basketball duo.jpg" alt="basketball duo"></div>
+                    <div class="gallery-item" data-title="basketball duo air"><img src="basketball duo_air.jpg" alt="basketball duo air"></div>
+                    <div class="gallery-item" data-title="beats pill"><img src="beats pill.jpg" alt="beats pill"></div>
+                    <div class="gallery-item" data-title="breathalyzer"><img src="breathalyzer.jpg" alt="breathalyzer"></div>
+                    <div class="gallery-item" data-title="car"><img src="car.jpg" alt="car"></div>
+                    <div class="gallery-item" data-title="chair"><img src="chair.png" alt="chair"></div>
+                    <div class="gallery-item" data-title="egypt theme box"><img src="egypt theme box.jpg" alt="egypt theme box"></div>
+                    <div class="gallery-item" data-title="electronics"><img src="electronics rnd.jpg" alt="electronics"></div>
+                    <div class="gallery-item" data-title="farming facilitator"><img src="farming facilitator.jpg" alt="farming facilitator"></div>
+                    <div class="gallery-item" data-title="foldable chair"><img src="foldable chair.jpg" alt="foldable chair"></div>
+                    <div class="gallery-item" data-title="folded chair"><img src="folded chair.jpg" alt="folded chair"></div>
+                    <div class="gallery-item" data-title="GT3 Megacar"><img src="GT3 Megacar.jpg" alt="GT3 Megacar"></div>
+                    <div class="gallery-item" data-title="guitar"><img src="guitar.png" alt="guitar"></div>
+                    <div class="gallery-item" data-title="holistic wire"><img src="holistic wire.jpg" alt="holistic wire"></div>
+                    <div class="gallery-item" data-title="iphone 14"><img src="iphone 14.jpg" alt="iphone 14"></div>
+                    <div class="gallery-item" data-title="metal cast shot"><img src="metal cast shot.jpg" alt="metal cast shot"></div>
+                    <div class="gallery-item" data-title="mini racing drone"><img src="mini racing drone.jpg" alt="mini racing drone"></div>
+                    <div class="gallery-item" data-title="mosquito conc camp"><img src="mosquito conc camp.jpg" alt="mosquito conc camp"></div>
+                    <div class="gallery-item" data-title="robotic arm"><img src="robotic arm.jpg" alt="robotic arm"></div>
+                    <div class="gallery-item" data-title="smart city"><img src="samrt city.jpg" alt="smart city"></div>
+                    <div class="gallery-item" data-title="supercar"><img src="supercar.jpg" alt="supercar"></div>
+                </div>
+            </section>
+    <footer class="bg-maroon-dark text-white p-8 sm:p-12 w-full">
+    <section id="contact">
+        <div class="flex flex-col items-center text-center space-y-8">
+
+            <div class="space-y-3">
+                
+                <div class="flex flex-col sm:flex-row space-y-1 sm:space-y-0 sm:space-x-8 text-lg font-medium">
+                <p style="color: white; text-decoration: none;">CONTACT US:  
+                    <a href="tel:9951596456" style="color: black; text-decoration: none;">
+                        <span class="mr-1">📞</span> 9951596456
+                    </a>
+                    <a href="tel:8745095086" style="color: black; text-decoration: none;">
+                        <span class="mr-1">📞</span> 8745095086
+                    </a>
+                </div>
+                <a href="mailto:cadclub@iiitdmj.ac.in" style="color: black; text-decoration: none;">
+                    <span class="mr-2">📧</span> cadclub@iiitdmj.ac.in
+                </a>
+            </p>
+            </div>
+
+            <div class="space-y-3">
+                <p class="text-base sm:text-lg font-semibold uppercase tracking-wider">VISIT US:
+                <a href="https://www.iiitdmj.ac.in/students/gymkhana/clubs.php" target="_blank" style="color: rgb(216, 145, 145); text-decoration: none;">
+                    https://www.iiitdmj.ac.in/students/gymkhana/clubs.php
+                </a></p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="flex space-x-6 justify-center">
+                <p class="text-base sm:text-lg font-semibold uppercase tracking-wider">FOLLOW US :</p>
+                    <a href="https://www.instagram.com/cad_club_iiitdmj"><img src="instagram.png" alt="Instagram" width="20px"></a>
+                    <a href="https://www.linkedin.com/company/cad-and-3d-printing-club-iiitdmj"><img src="linkedin.png" alt="LinkedIn" width="20px"></a>
+                </div>
+            </div>
+
+            <div class="text-sm sm:text-base font-normal pt-2">
+                <p class="font-bold mb-1">CAD & 3D Printing Club, PDPM IIITDMJ</p>
+            </div>
+
+        </div>
+    </section>
+</footer>
+</body>
+</html> 
