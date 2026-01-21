@@ -1,0 +1,1221 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    background:black;
+    color:white;
+    text-align: center;
+    /* overflow-x: hidden; */
+    scroll-behavior: smooth;
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(5, 5, 5, 0.3);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 68px;
+    flex-wrap: wrap;
+}
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    gap: 5px;
+}
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+.logo {
+    position: absolute;
+    left: 20px;
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    height: 60px;
+    width: auto;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+.nav-links.active {
+    flex-direction: column;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: rgba(5, 5, 5, 0.95);
+    width: 100%;
+    padding: 20px 0;
+    gap: 0;
+}
+.nav-links li {
+    position: relative;
+}
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 2px solid rgba(205, 205, 205, 1);
+    border-radius: 100px;
+    transition: all 0.3s ease-in-out;
+}
+.nav-links a:hover {
+    /* black-red themed hover: red background with subtle red glow and readable text */
+    background: rgba(223, 48, 48, 1);
+    color: black;
+    border-color: rgba(223, 48, 48, 1);
+    box-shadow: 0 8px 20px rgba(223, 48, 48, 0.22);
+    transform: translateY(-2px);
+}
+.content {
+    margin-top: 65px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+.printer {
+    margin-left: 120px;
+    margin-top: -30px;
+    filter: blur(70px);
+    width: 885px;
+    height: 885px;
+}
+.printer img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.printer2 {
+    position: absolute;
+    margin-left: 180px;
+    margin-top: 15px;
+    filter: brightness(150%);
+    width: 685px;
+    height: 685px;
+}
+.printer2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.text-overlay{
+    margin:0px;
+    font-family: "Bayon", sans-serif;
+    margin-left: -120px;
+}       
+#design-text{
+    color: rgb(255, 0, 0);
+    font-size: 40px;
+    font-weight: 400;
+    margin-top: 100px;
+    margin-left: -10px;
+    line-height: 63px;
+    letter-spacing: 2px;
+}
+#cad-text {
+    font-size: 250px;
+    font-weight: 400;
+    margin-top: -140px;
+    letter-spacing: 15px;
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 0px;
+}
+#and {
+    color: red;
+    font-size: 64px;
+    margin-top: -160px;
+    margin-left: -18px;
+    font-weight: 400;
+}
+#print-text{
+    font-size: 96px;
+    font-weight: 400;
+    margin-top: -110px;
+    margin-left: -10px;
+    letter-spacing: 3px;
+}
+#club-text{
+    font-size:48px ;
+    font-weight: 400;
+    color:rgba(255, 0, 0, 1);
+    margin-top: -120px;
+    margin-left: -2px;
+    letter-spacing: 3px;
+}
+.about-us{
+    color:rgba(197, 197, 197, 1);
+    margin-top:-70px;
+    font-weight: 400;
+    padding: 40px 20px;
+}
+.abtus-heading{
+    font-family: "Bayon", sans-serif;
+    font-size: 64px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    color: rgba(34, 17, 18, 1);
+    -webkit-text-stroke: 2px white;            
+}
+#abtus-content{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+.line1{
+    width: 909px;
+    height: 3px; 
+    background-color: rgba(223, 48, 48, 1); 
+    border: none;
+    margin: 0 auto;
+    margin-top: 50px; 
+}
+.line3{
+    width: 909px;
+    height: 3px; 
+    background-color: rgba(223, 48, 48, 1); 
+    border: none;
+    margin: 0 auto;
+}
+#line2{
+    width: 1072px;
+    height: 4px; 
+    background-color:rgba(255, 255, 255, 1); 
+    border: none;
+    margin: 0 auto;
+}
+#what-we-do{
+    height:300px;
+}
+#poly1{
+    position: absolute;
+    margin-left:-363px;
+    margin-top: 200px;
+    z-index: -2;
+
+}
+ #poly2{
+    position: absolute;
+    margin-left:-93px;
+    margin-top: -90px;
+    z-index: -2;
+}
+#poly3{
+    position: absolute;
+    margin-left:-93px;
+    margin-top: 700px;
+    z-index: -2;
+}        
+#project-text{
+    font-family: "Bayon", sans-serif;
+    font-size: 64px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin-top: -10px;
+}
+.projects {
+    padding: 40px 20px;
+    margin: 30px 0;
+}
+.project1, .project2 {
+    padding: 30px 20px;
+    margin: 30px auto;
+    max-width: 800px;
+}
+#underline-1{
+    width: 150px;
+    height: 0.5px;
+    background-color: white;
+    margin-top: -60px;
+}
+#ongoing-text{
+    font-family: "Bayon", sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    font-family: "Bayon", sans-serif;
+    letter-spacing: 2px;
+    margin-top: -5px;
+}
+#p1-image{
+    margin-top: -20px;
+}
+.pname{
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 30px;
+}
+#pcontent{
+    text-align: center;
+    line-height: 30px;
+    font-weight: 400px;
+    letter-spacing: 0.3px;
+    color:rgba(255, 255, 255, 1);
+    ;
+}
+#cadlogo-svg{
+    position: absolute;
+    width: 676px;
+    height: 716px;
+    filter:blur(5px);
+    opacity: 22%;
+    margin-top: -320px;
+    margin-left: -940px;
+}
+.heading{
+    font-size:64px ;
+    font-family: "Bayon", sans-serif;
+    font-weight: 400;
+    margin-top: 146px;
+    letter-spacing: 3px;
+}
+.achievments {
+    padding: 40px 20px;
+    margin: 30px 0;
+}
+#underline-2{
+    width: 150px;
+    height: 0.5px;
+    background-color: white;
+    margin-top: -60px;
+}
+#achievements-content{
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 40px;
+    letter-spacing: 0.5px;
+}
+#members-txt{
+    font-size: 36px;
+    font-weight:600;
+    line-height: 40px;
+    letter-spacing: 1px;
+    margin-top: 150px;
+}
+.hex-svg{
+    position:absolute;
+    z-index: -2;
+}
+#hex-1{
+    margin-top: 200px ;
+    margin-left: -290px; ;
+}
+#hex-2{
+    margin-top: -100px ;
+    margin-left: 10px; ;
+}
+#hex-3{
+    margin-top: 200px ;
+    margin-left: 503px; ;
+}
+#cerificate-img{
+    position:absolute;
+    margin-left: -540px;
+    margin-top: -30px;
+    
+}
+.number{
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 40px;
+    letter-spacing: 5px;
+}
+.cswap{
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 40px;
+    margin-left: 50px;
+    color: rgba(205, 205, 205, 1);
+    
+}  
+.details{
+    display: flex;
+    margin-left: 610px;
+    margin-top: -15px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+#cswp{
+    margin-top: -60px;
+    margin-left: 630px;
+}
+.certi-content{
+    font-size:24px ;
+    font-weight:400 ;
+    line-height:40px ;
+    letter-spacing: 0.5px;
+    word-spacing: 5px;
+}
+#cswa-content{
+    margin-top: 112px;
+}
+#cswp-content{
+    margin-top: 50px;
+}
+#certi-side-hdng{
+    font-weight: 700;
+}
+#wwr-cad-svg{
+    position: absolute;
+}
+.wwr{
+    margin-top: 310px;
+    padding: 40px 20px;
+}
+#wwr-text-img{
+    position:absolute;
+    display: flex;
+    margin-top: -310px;
+    margin-left: 200px;
+    z-index: 2;
+}
+#wwr-shadow{
+    position:absolute;
+    display: flex;
+    margin-top: -300px;
+    margin-left: 110px;
+    z-index: 1;
+}
+.designation{
+    font-family: "Bayon", sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+.underline{
+    height: 3px;
+    background-color: white;
+    margin-top: -40px;
+}
+#ul-1{
+    width:234px ;
+}
+#ul-2{
+    width: 173px; ;
+}
+#ul-3{
+    width: 209px;
+}
+#ul-4{
+    width: 207px;
+}
+.pp{
+    margin-top: 40px;
+    border-radius: 50%;
+    display: inline-block;
+    width: 220px;
+    height: 220px;
+    box-sizing: border-box;
+    object-fit: cover;
+}
+
+#pf-4 .pp{
+    border-radius: 0 !important;
+    max-width: 260px;
+    max-height: 260px;
+    object-fit: none;
+    display: inline-block;
+}
+.profile{
+    margin-top: 40px;
+}
+.name{
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+#pf-2{
+    margin-top: 70px;
+}
+#pf-3{
+    margin-top: 70px;
+}
+#pf-4{
+    margin-top: 70px;
+}
+.hdwd{
+    margin-top: 150px;
+    align-content: center;
+    padding: 40px 20px;
+}
+#hdwd-heading{
+    margin-top: 30px;
+    align-content: center;
+}
+#underline-sftwr{
+    width: 584px;
+    margin-top: -80px;
+}
+.software-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0 50px 0;
+    z-index: 2;
+}
+
+.software-hero img {
+    width: 260px;
+    height: auto;
+    max-width: 80%;
+    border-radius: 12px;
+    box-shadow: 0 16px 36px rgba(0,0,0,0.55);
+}
+.software-guide {
+    opacity: 0.22;
+    pointer-events: none;
+    display: block;
+    margin: 10px auto;
+    width: 520px;
+    max-width: 92%;
+    height: auto;
+    filter: drop-shadow(0 8px 20px rgba(0,0,0,0.45));
+}
+.advantages{
+    height: auto;
+    padding: 40px 20px;
+    min-height: 500px;
+}
+#center-text{
+    font-size: 64px;    
+    font-family: "Bayon", sans-serif;
+    font-weight: 400;
+    line-height: 80px;
+    margin-top: 600px;
+    letter-spacing: 3px;
+}
+.adv-points{
+    position: absolute;
+}
+.advt-text{
+    color: rgba(205, 205, 205, 1);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 2px;
+}
+#adv-1{
+    margin-top: -600px;
+    margin-left: 400px;
+}
+#adv-2{
+    margin-top: -600px;
+    margin-left: 880px;
+}
+#adv-3{
+    margin-top: -290px;
+    margin-left: 170px
+}
+#adv-4{
+    margin-top: -280px;
+    margin-left: 1100px;
+}
+#adv-5{
+    margin-top: 10px;
+    margin-left: 400px;
+}
+#adv-6{
+    margin-top: 10px;
+    margin-left: 900px;
+}
+/* Hover-scale effect for advantage icons and software images */
+.adv-svg,
+.hover-scale {
+    display: inline-block; /* allow transform */
+    transform-origin: center center;
+    transition: transform 200ms ease, filter 200ms ease;
+    cursor: pointer;
+}
+.adv-svg:hover,
+.hover-scale:hover {
+    transform: scale(1.08);
+    filter: brightness(1.05);
+}
+/* Reusable red glow for members, achievements and projects images */
+.glow-red{
+    display: inline-block;
+    transform-origin: center center;
+    transition: transform 220ms cubic-bezier(.2,.8,.2,1), filter 220ms ease;
+    will-change: transform, filter;
+}
+.glow-red:hover{
+    transform: scale(1.04);
+    /* layered drop-shadows produce a red glow; kept subtle */
+    filter: drop-shadow(0 0 12px rgba(255,0,0,0.85)) drop-shadow(0 0 28px rgba(255,0,0,0.25));
+}
+img#p2-image.glow-red{
+    display: inline-block;
+    transition: transform 220ms cubic-bezier(.2,.8,.2,1), box-shadow 220ms ease;
+    transform-origin: center center;
+    /* ensure no filter remains by default */
+    filter: none;
+}
+img#p2-image.glow-red:hover{
+    transform: scale(1.04);
+    /* use box-shadow to create a glow that doesn't tint the image */
+    box-shadow: 0 0 18px rgba(255,0,0,0.85), 0 0 36px rgba(255,0,0,0.25);
+}
+#gallery{ scroll-margin-top: 90px; }
+#gallery-section { scroll-margin-top: 90px; }
+#about-us { scroll-margin-top: 90px; }
+#projects { scroll-margin-top: 90px; }
+#achievements { scroll-margin-top: 90px; }
+#members { scroll-margin-top: 90px; }
+#contact { scroll-margin-top: 90px; }
+#gallery-section{
+    padding: 40px 20px;
+    background: rgba(0,0,0,0.02);
+    margin-top: 40px;
+    color: white;
+}
+#gallery-section .heading{
+    font-size: 48px;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+.gallery-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    align-items: stretch;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.gallery-item{
+    overflow: hidden;
+    border-radius: 8px;
+    background: rgba(20,20,20,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* needed for caption overlay */
+}
+.gallery-item img{
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    transition: transform 220ms ease, box-shadow 220ms ease;
+}
+.gallery-item img:hover{
+    transform: scale(1.06);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+.gallery-item::after{
+    content: attr(data-title);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px 8px;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 60%);
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 180ms ease, opacity 180ms ease;
+    opacity: 0;
+    pointer-events: none;
+}
+.gallery-item:hover::after{
+    transform: translateY(0%);
+    opacity: 1;
+}
+.bg-maroon-dark {
+    background-color: #581616;
+}
+
+/* ============================================ */
+/* UNIVERSAL IMAGE & EFFECT STYLES */
+/* ============================================ */
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Achievement images responsive sizing */
+.achievement-img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+/* Social icons responsive */
+.social-icon {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+/* All SVG elements responsive */
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive positioning for absolute positioned elements */
+#wwr-banner {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#tree-lines, #software-tree {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Glow effects responsive */
+.glow-red {
+    max-width: 100%;
+    height: auto;
+}
+
+.adv-svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ============================================ */
+/* RESPONSIVE MEDIA QUERIES - MOBILE & TABLET */
+/* ============================================ */
+
+/* Tablets - 768px and below */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 15px;
+        height: 60px;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(205, 205, 205, 0.2);
+    }
+    
+    .nav-links a {
+        border: none;
+        font-size: 14px;
+        padding: 8px 0;
+    }
+    
+    .logo img {
+        height: 45px;
+    }
+    
+    .content {
+        margin-top: 60px;
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .printer {
+        display: none;
+        margin-left: 0;
+        width: 100%;
+        height: auto;
+    }
+    
+    .printer2 {
+        margin: 20px auto;
+        position: relative;
+        margin-left: 0;
+        margin-top: 20px;
+        width: 80%;
+        height: auto;
+        filter: brightness(150%);
+    }
+    
+    .printer2 img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .text-overlay {
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    #design-text {
+        font-size: 24px;
+        margin-top: 20px;
+        line-height: 30px;
+    }
+    
+    #cad-text {
+        font-size: 60px;
+        margin-top: -30px;
+        letter-spacing: 8px;
+    }
+    
+    #print-text {
+        font-size: 48px;
+        margin-top: -30px;
+    }
+    
+    #club-text {
+        font-size: 24px;
+        margin-top: -30px;
+    }
+    
+    #what-we-do {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+    #poly1, #poly2, #poly3 {
+        display: none !important;
+    }
+    
+    .line1, .line3 {
+        width: 80%;
+    }
+    
+    #line2 {
+        width: 90%;
+    }
+    
+    #project-text {
+        font-size: 48px;
+    }
+    
+    #ongoing-text {
+        font-size: 32px;
+    }
+    
+    .project1, .project2 {
+        margin: 20px auto;
+        padding: 20px 15px;
+        max-width: 100%;
+    }
+    
+    #p1-image, #p2-image {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .pname {
+        font-size: 24px;
+    }
+    
+    #pcontent {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    
+    #pcontent br {
+        display: none;
+    }
+    
+    .heading {
+        font-size: 36px;
+        margin-top: 60px;
+    }
+    
+    #cadlogo-svg {
+        display: none !important;
+    }
+    
+    #members-txt {
+        font-size: 24px;
+    }
+    
+    #cerificate-img {
+        position: relative;
+        margin-left: 0;
+        max-width: 80%;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .details {
+        flex-direction: column;
+        margin-left: 0;
+        align-items: center;
+    }
+    
+    #cswp {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+    
+    .number {
+        font-size: 48px;
+    }
+    
+    .cswap {
+        font-size: 32px;
+        margin-left: 20px;
+    }
+    
+    .certi-content {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    
+    .wwr {
+        margin-top: 30px;
+        padding: 20px 10px;
+    }
+    
+    #wwr-text-img, #wwr-shadow {
+        position: relative;
+        margin: 0;
+        display: block;
+    }
+    
+    .designation {
+        font-size: 28px;
+    }
+    
+    .pp {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .name {
+        font-size: 20px;
+    }
+    
+    .hdwd {
+        margin-top: 40px;
+        padding: 20px 10px;
+    }
+    
+    #hdwd-heading {
+        font-size: 24px;
+        margin-top: 20px;
+    }
+    
+    #underline-sftwr {
+        width: 80%;
+    }
+    
+    #tree-lines, #software-tree {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+    #center-text {
+        font-size: 32px;
+        margin-top: 200px;
+        line-height: 40px;
+    }
+    
+    .advantages {
+        height: auto;
+        min-height: auto;
+        padding: 20px 10px;
+    }
+    
+    #adv-1, #adv-2, #adv-3, #adv-4, #adv-5, #adv-6 {
+        position: relative;
+        margin: 40px auto !important;
+    }
+    
+    .advt-text {
+        font-size: 20px;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 8px;
+    }
+    
+    .gallery-item img {
+        height: 120px;
+        width: 100%;
+        display: block;
+    }
+    
+    .social-icon {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .bg-maroon-dark {
+        padding: 20px 10px;
+    }
+}
+
+/* Mobile Phones - 480px and below */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 8px 10px;
+        height: 55px;
+    }
+    
+    .logo img {
+        height: 40px;
+    }
+    
+    .hamburger span {
+        width: 20px;
+        height: 2px;
+    }
+    
+    .content {
+        margin-top: 55px;
+    }
+    
+    .printer2 {
+        max-width: 90%;
+        width: 90%;
+        height: auto;
+        margin: 20px auto;
+    }
+    
+    .printer2 img {
+        width: 100%;
+        height: auto;
+    }
+    
+    #design-text {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    
+    #cad-text {
+        font-size: 42px;
+        letter-spacing: 4px;
+        margin-top: -20px;
+    }
+    
+    #and {
+        font-size: 32px;
+    }
+    
+    #print-text {
+        font-size: 32px;
+        margin-top: -20px;
+    }
+    
+    #club-text {
+        font-size: 18px;
+        margin-top: -20px;
+    }
+    
+    .abtus-heading {
+        font-size: 32px;
+    }
+    
+    #abtus-content {
+        font-size: 14px;
+        line-height: 24px;
+        padding: 0 15px;
+    }
+    
+    #abtus-content br {
+        display: none;
+    }
+    
+    .line1, .line3, #line2 {
+        width: 85%;
+    }
+    
+    #project-text {
+        font-size: 32px;
+    }
+    
+    #ongoing-text {
+        font-size: 24px;
+    }
+    
+    #underline-1, #underline-2 {
+        width: 80px;
+    }
+    
+    #p1-image, #p2-image {
+        max-width: 250px;
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .pname {
+        font-size: 18px;
+    }
+    
+    #achievements-content {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    
+    #members-txt {
+        font-size: 18px;
+        margin-top: 40px;
+    }
+    
+    .number {
+        font-size: 36px;
+    }
+    
+    .cswap {
+        font-size: 18px;
+        margin-left: 10px;
+    }
+    
+    .certi-content {
+        font-size: 12px;
+        padding: 0 15px;
+    }
+    
+    .designation {
+        font-size: 20px;
+    }
+    
+    .underline {
+        margin-top: -20px;
+    }
+    
+    #ul-1, #ul-2, #ul-3, #ul-4 {
+        width: 60px !important;
+    }
+    
+    .pp {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .name {
+        font-size: 16px;
+    }
+    
+    #pf-2, #pf-3, #pf-4 {
+        margin-top: 30px;
+    }
+    
+    #hdwd-heading {
+        font-size: 18px;
+    }
+    
+    #center-text {
+        font-size: 24px;
+        margin-top: 100px;
+        line-height: 32px;
+    }
+    
+    .advt-text {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 6px;
+    }
+    
+    .gallery-item img {
+        height: 100px;
+        width: 100%;
+        display: block;
+    }
+    
+    .gallery-item::after {
+        font-size: 10px;
+        padding: 6px 4px;
+    }
+    
+    .social-icon {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* Extra Small Devices - 360px and below */
+@media (max-width: 360px) {
+    .navbar {
+        height: 50px;
+    }
+    
+    .logo img {
+        height: 35px;
+    }
+    
+    #design-text {
+        font-size: 14px;
+    }
+    
+    #cad-text {
+        font-size: 32px;
+        letter-spacing: 2px;
+    }
+    
+    #print-text {
+        font-size: 24px;
+    }
+    
+    .pname {
+        font-size: 14px;
+    }
+    
+    #pcontent {
+        font-size: 12px;
+    }
+}
+
