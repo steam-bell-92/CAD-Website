@@ -32,8 +32,10 @@
     </nav>
 
     <div class="content">
-        <div class="printer"><img src="images/1000029579-removebg-preview[1] 1.png" alt="3D Printer"></div>
-        <div class="printer2"><img src="images/1000029579-removebg-preview[1] 1.png" alt="3D Printer Background"></div>
+        <div class="printer-container">
+            <div class="printer"><img src="images/1000029579-removebg-preview[1] 1.png" alt="3D Printer Blur"></div>
+            <div class="printer2"><img src="images/1000029579-removebg-preview[1] 1.png" alt="3D Printer"></div>
+        </div>
         <div class="text-overlay">
             <h1 id="design-text">DESIGN. INNOVATE. 3D PRINT</h1>
             <h1 id="cad-text">CAD</h1>
@@ -45,7 +47,7 @@
 
     <div id="about-us" class="about-us">
         <div class="abtus-heading">ABOUT US</div>
-        <P id="abtus-content">The CAD Club provides students with the opportunity to visualize design ideas using software like CATIA and<br>
+        <p id="abtus-content">The CAD Club provides students with the opportunity to visualize design ideas using software like CATIA and<br>
             SolidWorks Members gain a deeper understanding of design through renderings and simulations to assess real-world<br>
              performance.<br>
             CAD is a key part of Digital Product Development (DPD) within Product Lifecycle Management (PLM) and integrates with <br>
@@ -53,26 +55,26 @@
              aids in photorealistic rendering, motion simulation, and product data management (PDM).<br>
             Engineers use CAD for precise modeling, utilizing history, features, parameterization, and constraints to analyze properties<br>
              like tensile strength, stress, and environmental impact.
-        </P>
+        </p>
     </div>
 
     <hr class="line1"><br>
     <hr id="line2"><br>
     <hr class="line3">
-    <img src="images/what we do.png" id="what-we-do">
-    <img src="svg/Polygon 1 (1).svg" id="poly1">
-    <img src="svg/Polygon 2.svg" id="poly2">
-    <img src="svg/Polygon 3.svg" id="poly3">
+    <img src="images/what we do.png" id="what-we-do" alt="What We Do">
+    <img src="svg/Polygon 1 (1).svg" id="poly1" alt="">
+    <img src="svg/Polygon 2.svg" id="poly2" alt="">
+    <img src="svg/Polygon 3.svg" id="poly3" alt="">
 
 
     <div id="projects" class="projects">
-        <div><h1 id=project-text>PROJECTS</h1>
+        <div><h1 id="project-text">PROJECTS</h1>
             <hr id="underline-1">
-        <h1 id=ongoing-text>ONGOING PROJECTS</h1>
+        <h1 id="ongoing-text">ONGOING PROJECTS</h1>
         </div>
 
-        <div class="project1">
-            <img src="images/bioarm.png" id="p1-image" class="glow-red">
+        <div class="project-card project1">
+            <img src="images/bioarm.png" id="p1-image" class="project-img glow-red" alt="Bionic Arm">
             <h1 class="pname">Bionic Arm</h1>
             <p id="pcontent">
                 Our CAD project focused on developing a functional, lightweight bionic arm prototype.<br>
@@ -83,8 +85,8 @@
             </p>
         </div>
         <br>
-        <div class="project2">
-            <img src="images/driveline.png" id="p2-image" class="glow-red">
+        <div class="project-card project2">
+            <img src="images/driveline.png" id="p2-image" class="project-img glow-red" alt="Driveline">
             <h1 class="pname">Driveline</h1>
             <p id="pcontent">
                 Our CAD work focused on modeling a robust and efficient driveline system,<br> the critical component 
@@ -95,8 +97,8 @@
             </p>
         </div>
         <br>
-        <div class="project3">
-            <img src="images/robotic arm.jpg" id="p3-image" class="glow-red" style="width: 300px; height: 200px;">
+        <div class="project-card project3">
+            <img src="images/robotic arm.jpg" id="p3-image" class="project-img glow-red" alt="Robotic Arm">
             <h1 class="pname">Robotic Arm</h1>
             <p id="pcontent">
                 Our CAD project involved designing a versatile robotic arm prototype,<br>
@@ -108,9 +110,8 @@
             </p>
         </div>
         <br>
-        <br>
-        <div class="project4">
-            <img src="images/ferrar.png" id="p4-image" class="glow-red" style="width: 300px; height: 200px;">
+        <div class="project-card project4">
+            <img src="images/ferrar.png" id="p4-image" class="project-img glow-red" alt="Ferrari">
             <h1 class="pname">Ferrari</h1>
             <p id="pcontent">
                 Our CAD project focused on creating a detailed 3D model of a Ferrari sports car,<br>
@@ -122,9 +123,8 @@
             </p>
         </div>
         <br>
-        <br>
-        <div class="project5">
-            <img src="images/multi terrai.png" id="p5-image" class="glow-red" style="width: 300px; height: 200px;">
+        <div class="project-card project5">
+            <img src="images/multi terrai.png" id="p5-image" class="project-img glow-red" alt="Multi Terrain Vehicle">
             <h1 class="pname">Multi Terrain Vehicle</h1>
             <p id="pcontent">
                 Our CAD project involved designing a robust multi-terrain vehicle,<br>
@@ -136,8 +136,8 @@
             </p>
         </div>
         <br>
-        <div class="project6">
-            <img src="images/RCjet.png" id="p6-image" class="glow-red" style="width: 500px; height: 300px;">
+        <div class="project-card project6">
+            <img src="images/RCjet.png" id="p6-image" class="project-img glow-red" alt="RC Jet">
             <h1 class="pname">RC Jet</h1>
             <p id="pcontent">
                 Our CAD project focused on creating a detailed 3D model of an RC jet,<br>
@@ -152,123 +152,127 @@
     <img src="images/cad.png" id="cadlogo-svg">
 
     <div id="achievements" class="achievments">
-        <h1 class="heading">ACHIVEMENTS</h1>
+        <h1 class="heading">ACHIEVEMENTS</h1>
         <hr id="underline-2"> 
-        <p id="achievements-content">
-            Autodesk Design Challenge organised by IIT Kanpur where our VTOL model <br>
+        <p class="achievements-content">
+            Autodesk Design Challenge organised by IIT Kanpur where our VTOL model<br>
             secured 1st rank.<br>
             The team designed a VTOL drone in Autodesk Fusion 360.
         </p>
-        <img src="images/achievements img.png" id="achievments-image" class="glow-red">
+        <img src="images/achievements img.png" class="glow-red achievement-img" alt="VTOL Drone Achievement">
 
-        <p id="achievements-content">
+        <p class="achievements-content">
             One of the flagship events at COGNIZANCE’25,<br>
             the prestigious annual techfest of IIT Roorkee, where we secured 1st position.<br>
             The team designed a 3D model of a Smart City.
         </p>
-        <img src="images/cognizance.jpg" id="achievments-image" class="glow-red achievement-img" alt="Cognizance Achievement">
+        <img src="images/cognizance.jpg" class="glow-red achievement-img" alt="Cognizance Achievement">
 
-        <p id="achievements-content">
+        <p class="achievements-content">
             AutoDesk Design Challenge at IIT Kanpur Techfest 2025 (Techkriti)<br>
-            where we secured 1st runner up.<br>
+            where we secured 1st runner up.
         </p>
-        <img src="images/techkriti1.png" id="achievments-image" class="glow-red achievement-img" alt="Techkriti Achievement 1">
+        <img src="images/techkriti1.png" class="glow-red achievement-img" alt="Techkriti Achievement 1">
 
-        <p id="achievements-content">
+        <p class="achievements-content">
             AutoDesk Design Challenge at IIT Kanpur Techfest 2025 (Techkriti)<br>
-            where we secured 2nd runner up.<br>
+            where we secured 2nd runner up.
         </p>
-        <img src="images/techkriti2.jpg" id="achievments-image" class="glow-red achievement-img" alt="Techkriti Achievement 2"><br><br>
+        <img src="images/techkriti2.jpg" class="glow-red achievement-img" alt="Techkriti Achievement 2">
 
-        <p id="achievements-content">
+        <p class="achievements-content">
            506 Army workshop 
         </p>
-        <img src="images/army.png" id="achievments-image" class="glow-red achievement-img" alt="506 Army Workshop" style="width: 1000px; height: 500px;"><br><br>
+        <img src="images/army.png" class="glow-red achievement-img" alt="506 Army Workshop">
 
-        <p id="achievements-content">
-              SMDC (smart mechanical design contest) organised by IIT hyderabad where our team secured runner up position.<br>
+        <p class="achievements-content">
+              SMDC (smart mechanical design contest) organised by IIT hyderabad where our team secured runner up position.
         </p>
-        <img src="images/smdc.png" id="achievments-image" class="glow-red achievement-img" alt="SMDC Achievement" style="width: 1000px; height: 500px;"><br><br>
+        <img src="images/smdc.png" class="glow-red achievement-img" alt="SMDC Achievement">
         
-        <h2 style="color: rgba(255,0,0,0.85);">AND MORE...</h2>
-
+        <h2 style="color: rgba(255,0,0,0.85); margin-top: 30px;">AND MORE...</h2>
     </div>
+
     <div id="members-achievements">
-    <h1 id="members-txt">Our  members have  achieved</h1>
-        <img src="images/certificate-img.png" id="cerificate-img">
-        <img src="images/cswp.png" id="cswp-img">
-        <img src="images/cswp.jpeg" id="cswa-img">
-
-        <!-- <div class="details">
-            <p class=number id="num-">26</p>
-            <p class="cswap" id="cswa-text"> CSWA Certifications</p>
+        <h1 id="members-txt">Our members have achieved</h1>
+        <div class="cert-showcase">
+            <img src="images/certificate-img.png" class="cert-img glow-red" alt="Certification">
+            <img src="images/cswp.png" class="cert-img glow-red" alt="CSWP Certification">
+            <img src="images/cswp.jpeg" class="cert-img glow-red" alt="CSWA Certification">
         </div>
+        <div class="cert-info">
+            <p class="certi-content" id="cswa-content"><span class="certi-side-hdng">CSWA :</span> 
+                It is an entry-level certification for students and professionals seeking 
+                to demonstrate proficiency in CAD design. The CSWA certification proves 
+                foundational CAD skills, enhancing job prospects in engineering, product 
+                design, and manufacturing. It helps employers identify candidates with verified 
+                SOLIDWORKS proficiency, giving certified individuals a competitive edge.
+            </p>
+            <p class="certi-content" id="cswp-content"><span class="certi-side-hdng">CSWP :</span>  
+                The CSWP (Certified SOLIDWORKS Professional) Certifications
+                demonstrates advanced proficiency in SOLIDWORKS, including complex part
+                modeling, assemblies, and design validation. It is highly valued in the industry, 
+                boosting job prospects and credibility for mechanical and industrial designers.
+            </p>
+        </div>
+    </div>
 
-        <div class="details" id="cswp">
-            <p class="number" id="num-1">1 </p>
-            <p class="cswap" id="cswp-text"> CSWP Certifications</p>
-        </div> -->
-    </div>
-        <p class="certi-content" id="cswa-content"><span id="certi-side-hdng">CSWA :</span> 
-            It is an entry-level certification for students and professionals seeking <br>
-            to demonstrate proficiency in CAD design. The CSWA certification proves <br>
-            foundational CAD skills, enhancing job prospects in engineering, product <br>
-            design, and manufacturing. It helps employers identify candidates with verified<br> 
-            SOLIDWORKS proficiency, giving certified individuals a competitive edge.
-        </p>
-        <p class="certi-content" id="cswp-content"><span id="certi-side-hdng">CSWP :</span>  
-            The CSWP (Certified SOLIDWORKS Professional) Certifications<br>
-            demonstrates advanced proficiency in SOLIDWORKS, including complex part<br>
-            modeling, assemblies, and design validation. It is highly valued in the industry,<br> 
-            boosting job prospects and credibility for mechanical and industrial designers.
-        </p>
-    </div>
     <div class="wwr">
-        <img src="images/who we are.png" id="wwr-banner">
-        <img src="images/who we are img.png" id="wwr-text-img">
-        <img src="images/black shadow.png" id="wwr-shadow">
+        <div class="wwr-banner-container">
+            <img src="images/who we are.png" id="wwr-banner" alt="Who We Are Banner">
+            <img src="images/who we are img.png" id="wwr-text-img" alt="Who We Are">
+            <img src="images/black shadow.png" id="wwr-shadow" alt="">
+        </div>
         <div id="members" class="members">
             <h1 class="designation">FACULTY INCHARGE</h1>
             <hr class="underline" id="ul-1">
-            <img src="images/MKT sir.jpg" class="pp glow-red">
+            <img src="images/MKT sir.jpg" class="pp glow-red" alt="Dr. Manish K. Thakur">
             <h1 class="name">Dr. Manish K. Thakur</h1>
         </div>
         <div class="profile" id="pf-2">
             <h1 class="designation">COORDINATOR</h1>
             <hr class="underline" id="ul-2">
-            <img src="images/Raj sir.jpg" class="pp glow-red">
+            <img src="images/Raj sir.jpg" class="pp glow-red" alt="Raj Jain">
             <h1 class="name">Raj Jain</h1>
         </div>
         <div class="profile" id="pf-3">
             <h1 class="designation">CO-COORDINATORS</h1>
             <hr class="underline" id="ul-3">
-            <img src="images/abhay.jpeg" class="pp glow-red">
-            <h1 class="name">abhayanand VC</h1>
-            <img src="images/jaypreet.jpeg" class="pp glow-red">
-            <h1 class="name">jaypreet panchal</h1>
+            <div class="co-coordinators-wrap">
+                <div class="coordinator-card">
+                    <img src="images/abhay.jpeg" class="pp glow-red" alt="Abhayanand VC">
+                    <h1 class="name">Abhayanand VC</h1>
+                </div>
+                <div class="coordinator-card">
+                    <img src="images/jaypreet.jpeg" class="pp glow-red" alt="Jaypreet Panchal">
+                    <h1 class="name">Jaypreet Panchal</h1>
+                </div>
+            </div>
         </div>
         <div class="profile" id="pf-4">
             <h1 class="designation">OTHER MEMBERS</h1>
             <hr class="underline" id="ul-4">
-              <img src="images/other members.png" class="glow-red" style="width: auto; height: auto;">
-              <br>
-              <img src="images/other member.png" class="glow-red" style="width: auto; height: auto;">
-              <br>  
-              <img src="images/othermemb.jpeg" class="glow-red" style="width: 1000px; height: 500px;">
+            <div class="other-members-wrap">
+                <img src="images/other members.png" class="glow-red om-img" alt="Other Members">
+                <img src="images/other member.png" class="glow-red om-img" alt="Other Member">
+                <img src="images/othermemb.jpeg" class="glow-red om-img" alt="CAD Club Members Group">
+            </div>
         </div>
     </div>
+
     <div class="hdwd">
-        <img src="images/how we do.png">
+        <img src="images/how we do.png" alt="How We Do" style="max-width: 900px; width: 90%; margin: 0 auto; display: block;">
         <p class="heading" id="hdwd-heading">
             SOFTWARES WE TEACH AND THEIR ADVANTAGES :
         </p>
         <hr class="underline" id="underline-sftwr">
-        <img src="images/software-tree.png" id="software-tree">
+        <img src="images/software-tree.png" id="software-tree" alt="Software Tree">
     </div>
+
     <div class="advantages">
         <p id="center-text">
-            ADVANTAGES <BR>
-            OF <br> 
+            ADVANTAGES<br>
+            OF<br>
             CAD
         </p>
         <div class="adv-points" id="adv-1">
@@ -288,12 +292,12 @@
             <p class="advt-text">Code Re-Use</p>
         </div>
         <div class="adv-points" id="adv-5">
-            <img src="svg/decrease in efforts.svg" class="adv-svg" alt="Decrease in effort" title="Decrease in effort">
-            <p class="advt-text">Decrease in<br><br> effort</p>
+            <img src="svg/decrease in efforts.svg" class="adv-svg" alt="Decrease in Effort" title="Decrease in Effort">
+            <p class="advt-text">Decrease in Effort</p>
         </div>
         <div class="adv-points" id="adv-6">
             <img src="svg/improved accuracy.svg" class="adv-svg" alt="Improved Accuracy" title="Improved Accuracy">
-            <p class="advt-text">Improved<br><br> Accuracy</p>
+            <p class="advt-text">Improved Accuracy</p>
         </div>
     </div>
 
@@ -329,19 +333,20 @@
 
             <div class="space-y-3">
                 
-                <div class="flex flex-col sm:flex-row space-y-1 sm:space-y-0 sm:space-x-8 text-lg font-medium">
-                <p style="color: white; text-decoration: none;">CONTACT US:  
-                    <a href="tel:9951596456" style="color: black; text-decoration: none;">
-                        <span class="mr-1">📞</span> 9951596456
-                    </a>
-                    <a href="tel:8745095086" style="color: black; text-decoration: none;">
-                        <span class="mr-1">📞</span> 8745095086
+                <div class="contact-links">
+                    <p class="contact-title">CONTACT US:</p>
+                    <div class="phone-links">
+                        <a href="tel:9951596456" class="footer-link">
+                            <span class="mr-1">📞</span> 9951596456
+                        </a>
+                        <a href="tel:8745095086" class="footer-link">
+                            <span class="mr-1">📞</span> 8745095086
+                        </a>
+                    </div>
+                    <a href="mailto:cadclub@iiitdmj.ac.in" class="footer-link email-link">
+                        <span class="mr-2">📧</span> cadclub@iiitdmj.ac.in
                     </a>
                 </div>
-                <a href="mailto:cadclub@iiitdmj.ac.in" style="color: black; text-decoration: none;">
-                    <span class="mr-2">📧</span> cadclub@iiitdmj.ac.in
-                </a>
-            </p>
             </div>
 
             <div class="space-y-3">
