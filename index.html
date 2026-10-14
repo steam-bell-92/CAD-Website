@@ -15,11 +15,11 @@
         <div class="logo">
             <img src="images/cad.png" alt="Logo">
         </div>
-        <div class="hamburger" id="hamburger">
+        <button class="hamburger" id="hamburger" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
             <span></span>
             <span></span>
             <span></span>
-        </div>
+        </button>
         <ul class="nav-links" id="navLinks">
             <li><a href="#">Home</a></li>
             <li><a href="#about-us">About Us</a></li>
@@ -62,10 +62,6 @@
     <hr id="line2"><br>
     <hr class="line3">
     <img src="images/what we do.png" id="what-we-do" alt="What We Do">
-    <img src="svg/Polygon 1 (1).svg" id="poly1" alt="">
-    <img src="svg/Polygon 2.svg" id="poly2" alt="">
-    <img src="svg/Polygon 3.svg" id="poly3" alt="">
-
 
     <div id="projects" class="projects">
         <div><h1 id="project-text">PROJECTS</h1>
@@ -327,50 +323,54 @@
                     <div class="gallery-item" data-title="supercar"><img src="images/supercar.jpg" alt="supercar"></div>
                 </div>
             </section>
-    <footer class="bg-maroon-dark text-white p-8 sm:p-12 w-full">
-    <section id="contact">
-        <div class="flex flex-col items-center text-center space-y-8">
+    <footer class="site-footer">
+        <section id="contact" class="footer-inner">
+            <div class="footer-intro">
+                <span class="footer-kicker">PDPM IIITDMJ</span>
+                <p class="footer-title">CAD &amp; 3D<br>Printing Club</p>
+                <p class="footer-note">CAD &amp; 3D Printing Club, PDPM IIITDMJ</p>
+            </div>
 
-            <div class="space-y-3">
-                
-                <div class="contact-links">
-                    <p class="contact-title">CONTACT US:</p>
-                    <div class="phone-links">
-                        <a href="tel:9951596456" class="footer-link">
-                            <span class="mr-1">📞</span> 9951596456
-                        </a>
-                        <a href="tel:8745095086" class="footer-link">
-                            <span class="mr-1">📞</span> 8745095086
-                        </a>
-                    </div>
-                    <a href="mailto:cadclub@iiitdmj.ac.in" class="footer-link email-link">
-                        <span class="mr-2">📧</span> cadclub@iiitdmj.ac.in
+            <div class="footer-column">
+                <p class="footer-heading">EXPLORE</p>
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <a href="#">Home</a>
+                    <a href="#about-us">About Us</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#achievements">Achievements</a>
+                    <a href="#members">Members</a>
+                    <a href="#gallery">Gallery</a>
+                </nav>
+            </div>
+
+            <div class="footer-column footer-contact">
+                <p class="footer-heading">CONTACT US</p>
+                <div class="phone-links">
+                    <a href="tel:9951596456" class="footer-link">9951596456</a>
+                    <a href="tel:8745095086" class="footer-link">8745095086</a>
+                </div>
+                <a href="mailto:cadclub@iiitdmj.ac.in" class="footer-link email-link">cadclub@iiitdmj.ac.in</a>
+                <p class="footer-heading visit-heading">VISIT US</p>
+                <a class="institution-link" href="https://www.iiitdmj.ac.in/students/gymkhana/clubs.php" target="_blank" rel="noopener noreferrer">https://www.iiitdmj.ac.in/students/gymkhana/clubs.php</a>
+            </div>
+
+            <div class="footer-column footer-social">
+                <p class="footer-heading">FOLLOW US</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/cad_club_iiitdmj" aria-label="Instagram">
+                        <img src="images/instagram.png" alt="Instagram" class="social-icon">
+                    </a>
+                    <a href="https://www.linkedin.com/company/cad-and-3d-printing-club-iiitdmj" aria-label="LinkedIn">
+                        <img src="images/linkedin.png" alt="LinkedIn" class="social-icon">
                     </a>
                 </div>
             </div>
-
-            <div class="space-y-3">
-                <p class="text-base sm:text-lg font-semibold uppercase tracking-wider">VISIT US:
-                <a href="https://www.iiitdmj.ac.in/students/gymkhana/clubs.php" target="_blank" style="color: rgb(216, 145, 145); text-decoration: none;">
-                    https://www.iiitdmj.ac.in/students/gymkhana/clubs.php
-                </a></p>
-            </div>
-
-            <div class="space-y-4">
-                <div class="flex space-x-6 justify-center">
-                <p class="text-base sm:text-lg font-semibold uppercase tracking-wider">FOLLOW US :</p>
-                    <a href="https://www.instagram.com/cad_club_iiitdmj"><img src="images/instagram.png" alt="Instagram" class="social-icon"></a>
-                    <a href="https://www.linkedin.com/company/cad-and-3d-printing-club-iiitdmj"><img src="images/linkedin.png" alt="LinkedIn" class="social-icon"></a>
-                </div>
-            </div>
-
-            <div class="text-sm sm:text-base font-normal pt-2">
-                <p class="font-bold mb-1">CAD & 3D Printing Club, PDPM IIITDMJ</p>
-            </div>
-
+        </section>
+        <div class="footer-bottom">
+            <span>CAD &amp; 3D Printing Club, PDPM IIITDMJ</span>
+            <span class="footer-mark">DESIGN / INNOVATE / 3D PRINT</span>
         </div>
-    </section>
-</footer>
+    </footer>
 <script src="js/script.js"></script>
 </body>
 
