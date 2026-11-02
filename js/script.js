@@ -12,15 +12,16 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     
     // Hamburger menu toggle for mobile
-    if (hamburger) {
+    if (hamburger && navLinks) {
         hamburger.addEventListener('click', function() {
             hamburger.classList.toggle('active');
             navLinks.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', navLinks.classList.contains('active'));
         });
     }
     
     // Close mobile menu when a link is clicked
-    const navItems = navLinks.querySelectorAll('a');
+    const navItems = navLinks ? navLinks.querySelectorAll('a') : [];
     navItems.forEach(link => {
         link.addEventListener('click', function() {
             hamburger.classList.remove('active');
@@ -35,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
+            const targetElement = targetId && targetId !== '#' ? document.querySelector(targetId) : null;
             
             if (targetElement) {
                 const offsetTop = targetElement.offsetTop - getNavbarHeight() - 20;
@@ -43,9 +44,17 @@ document.addEventListener('DOMContentLoaded', function() {
                     top: offsetTop,
                     behavior: 'smooth'
                 });
+            } else if (targetId === '#') {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             }
         });
     });
+
+    if (navBar) {
+        const updateNavbar = () => navBar.classList.toggle('scrolled', window.scrollY > 24);
+        updateNavbar();
+        window.addEventListener('scroll', updateNavbar, { passive: true });
+    }
     
     // Add touch-friendly hover effect for images on mobile
     const images = document.querySelectorAll('.glow-red, .adv-svg, .gallery-item img');
@@ -82,5 +91,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-
 
